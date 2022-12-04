@@ -1,4 +1,4 @@
-function RoomCard() {
+export default function RoomCard() {
   return (
     <article className="cities__card place-card">
       <div className="place-card__mark">
@@ -32,4 +32,4 @@ function RoomCard() {
   );
 }
 
-export default RoomCard;
+
