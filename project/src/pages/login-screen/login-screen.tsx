@@ -1,3 +1,6 @@
+import {Link} from 'react-router-dom';
+import {AppRoute} from '../../const';
+
 export default function LoginScreen() {
   return (
     <div className="page page--gray page--login">
@@ -5,7 +8,7 @@ export default function LoginScreen() {
         <div className="container">
           <div className="header__wrapper">
             <div className="header__left">
-              <a className="header__logo-link" href="main.html">
+              <Link className="header__logo-link" to={AppRoute.Main}>
                 <img
                   className="header__logo"
                   src="img/logo.svg"
@@ -13,7 +16,7 @@ export default function LoginScreen() {
                   height="41"
                   alt="6 cities logo"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -57,7 +60,7 @@ export default function LoginScreen() {
 
           <section className="locations locations--login locations--current">
             <div className="locations__item">
-              <a className="locations__item-link" href="#">
+              <a className="locations__item-link" href="#todo">
                 <span>Amsterdam</span>
               </a>
             </div>
