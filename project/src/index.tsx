@@ -12,6 +12,6 @@ const Setting = {
 
 root.render(
   <React.StrictMode>
-    <App placeCardCount={Setting.PlaceCardCount} />
+    <App roomCardCount={Setting.PlaceCardCount} />
   </React.StrictMode>,
 );

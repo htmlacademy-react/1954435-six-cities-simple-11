@@ -4,10 +4,10 @@ import Sorting from '../../components/sorting/sorting';
 import RoomCard from '../../components/room-card/room-card';
 
 type MainScreenProps = {
-  placeCardCount: number;
+  roomCardCount: number;
 };
 
-export default function MainScreen({placeCardCount}: MainScreenProps):JSX.Element {
+export default function MainScreen({roomCardCount}: MainScreenProps):JSX.Element {
   return (
     <body className="page page--gray page--main">
       <div style={{display: 'none'}}>
@@ -25,7 +25,7 @@ export default function MainScreen({placeCardCount}: MainScreenProps):JSX.Elemen
           <div className="cities__places-container container">
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">  {placeCardCount} places to stay in Amsterdam</b>
+              <b className="places__found">  {roomCardCount} places to stay in Amsterdam</b>
 
               <Sorting />
 
