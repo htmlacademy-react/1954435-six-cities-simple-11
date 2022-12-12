@@ -20,7 +20,7 @@ export default function MainScreen({roomCardCount}: MainScreenProps):JSX.Element
         <title>Six cities</title>
       </Helmet>
 
-      <Header />
+      <Header hasNavigation />
 
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
