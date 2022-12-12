@@ -30,6 +30,7 @@ export default function MainScreen({roomCardCount}: MainScreenProps):JSX.Element
               <Sorting />
 
               <div className="cities__places-list places__list tabs__content">
+
                 <RoomCard />
                 <RoomCard />
                 <RoomCard />
