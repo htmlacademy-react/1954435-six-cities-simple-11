@@ -1,4 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {HelmetProvider} from 'react-helmet-async';
 import { AppRoute } from '../../const';
 
 import MainScreen from '../../pages/main-screen/main-screen';
@@ -12,26 +13,30 @@ type AppProps = {
 
 function App({roomCardCount}: AppProps): JSX.Element {
   return(
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path={AppRoute.Main}
-          element={<MainScreen roomCardCount={roomCardCount} />}
-        />
-        <Route
-          path={AppRoute.Login}
-          element={<LoginScren />}
-        />
-        <Route
-          path={AppRoute.Offer}
-          element={<RoomScreen />}
-        />
-        <Route
-          path={AppRoute.NotFound}
-          element={<NotFoundScreen />}
-        />
-      </Routes>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path={AppRoute.Main}
+            element={<MainScreen roomCardCount={roomCardCount} />}
+          />
+          <Route
+            path={AppRoute.Login}
+            element={<LoginScren />}
+          />
+          <Route
+            path={AppRoute.Offer}
+            element={<RoomScreen />}
+          />
+          <Route
+            path={AppRoute.NotFound}
+            element={<NotFoundScreen />}
+          />
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
+
+
   );
 }
 
