@@ -37,6 +37,8 @@ export default function MainScreen({roomCardCount}: MainScreenProps):JSX.Element
 
               <div className="cities__places-list places__list tabs__content">
 
+                {/* TODO при появлении данных, переделать на map */}
+                {/*Array.from({length: props.roomCardCount}).map(() => <RoomCard />)*/}
                 <RoomCard />
                 <RoomCard />
                 <RoomCard />
