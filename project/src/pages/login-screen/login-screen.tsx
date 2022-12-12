@@ -1,23 +1,14 @@
-function LoginScreen() {
+import {Helmet} from 'react-helmet-async';
+import Header from '../../components/header/header';
+
+export default function LoginScreen() {
   return (
     <div className="page page--gray page--login">
-      <header className="header">
-        <div className="container">
-          <div className="header__wrapper">
-            <div className="header__left">
-              <a className="header__logo-link" href="main.html">
-                <img
-                  className="header__logo"
-                  src="img/logo.svg"
-                  width="81"
-                  height="41"
-                  alt="6 cities logo"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Helmet>
+        <title>Six cities: sign in</title>
+      </Helmet>
+
+      <Header hasNavigation={false} />
 
       <main className="page__main page__main--login">
         <div className="page__login-container container">
@@ -57,7 +48,7 @@ function LoginScreen() {
 
           <section className="locations locations--login locations--current">
             <div className="locations__item">
-              <a className="locations__item-link" href="#">
+              <a className="locations__item-link" href="#todo">
                 <span>Amsterdam</span>
               </a>
             </div>
@@ -69,4 +60,4 @@ function LoginScreen() {
   );
 }
 
-export default LoginScreen;
+
