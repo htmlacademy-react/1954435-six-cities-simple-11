@@ -13,7 +13,6 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App
-      roomCardCount = {offers.length}
       offers = {offers}
       reviews = {reviews}
     />
