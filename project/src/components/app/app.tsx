@@ -4,13 +4,12 @@ import { AppRoute } from '../../const';
 
 import MainScreen from '../../pages/main-screen/main-screen';
 import LoginScren from '../../pages/login-screen/login-screen';
-//import RoomScreen from '../../pages/room-screen/room-screen';
+import RoomScreen from '../../pages/room-screen/room-screen';
 import NotFoundScreen from '../../pages/not-found-screen/not-found-screen';
 import {Offers} from '../../types/offer';
 import {Reviews} from '../../types/review';
 
 type AppProps = {
-  //roomCardCount: number;
   offers: Offers;
   reviews: Reviews;
 };
@@ -29,11 +28,11 @@ function App({offers, reviews}: AppProps): JSX.Element {
             path={AppRoute.Login}
             element={<LoginScren />}
           />
-          {/*
+
           <Route
             path={AppRoute.Offer}
-            element={<RoomScreen reviews={reviews} />}
-           /> */}
+            element={<RoomScreen />}
+          />
           <Route
             path={AppRoute.NotFound}
             element={<NotFoundScreen />}
