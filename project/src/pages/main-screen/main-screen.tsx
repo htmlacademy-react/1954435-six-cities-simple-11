@@ -2,14 +2,17 @@ import {Helmet} from 'react-helmet-async';
 import Header from '../../components/header/header';
 import LocationNav from '../../components/location-nav/location-nav';
 import Sorting from '../../components/sorting/sorting';
-import RoomCard from '../../components/room-card/room-card';
+//import RoomCard from '../../components/room-card/room-card';
+import OfferList from '../../components/offer-list/offer-list';
+import {Offers} from '../../types/offer';
 
 
 type MainScreenProps = {
-  roomCardCount: number;
+
+  offers: Offers;
 };
 
-export default function MainScreen({roomCardCount}: MainScreenProps):JSX.Element {
+export default function MainScreen({offers}: MainScreenProps):JSX.Element {
   return (
     <body className="page page--gray page--main">
       <div style={{display: 'none'}}>
@@ -31,19 +34,13 @@ export default function MainScreen({roomCardCount}: MainScreenProps):JSX.Element
           <div className="cities__places-container container">
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">  {roomCardCount} places to stay in Amsterdam</b>
+              <b className="places__found">  {offers.length} places to stay in Amsterdam</b>
 
               <Sorting />
 
               <div className="cities__places-list places__list tabs__content">
 
-                {/* TODO при появлении данных, переделать на map */}
-                {/*Array.from({length: props.roomCardCount}).map(() => <RoomCard />)*/}
-                <RoomCard />
-                <RoomCard />
-                <RoomCard />
-                <RoomCard />
-                <RoomCard />
+                <OfferList offers={offers} />
 
               </div>
             </section>
